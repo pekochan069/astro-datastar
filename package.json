@@ -15,7 +15,8 @@
   ],
   "homepage": "https://github.com/pekochan069/astro-datastar",
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"
