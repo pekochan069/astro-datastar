@@ -11,6 +11,7 @@
   "keywords": [
     "astro-integration",
     "astro",
+    "renderer",
     "datastar"
   ],
   "homepage": "https://github.com/pekochan069/astro-datastar",
