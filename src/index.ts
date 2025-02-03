@@ -4,6 +4,32 @@ import type { Plugin } from "vite";
 
 type Options = {
 	noDefaultPlugins?: boolean;
+	/**
+	 * Configure Datastar using custom entrypoint
+	 * ```js
+	 * // astro.config.mjs
+	 * import { defineConfig } from "astro/config";
+	 * import datastar from "@pekochan069/astro-datastar";
+	 *
+	 * // https://astro.build/config
+	 * export default defineConfig({
+	 *   integrations: [datastar({
+	 * 	   entrypoint: "./src/entrypoint.js",
+	 *   })],
+	 * });
+	 * ```
+	 *
+	 * Then create entrypoint file like this:
+	 *
+	 * ```js
+	 * // src/entrypoint.js
+	 * export default function setup(datastar) {
+	 *   datastar.load(
+	 *     customPlugin,
+	 *   )
+	 * }
+	 * ```
+	 */
 	entrypoint?: string;
 };
 
@@ -75,7 +101,24 @@ export const setup = (Datastar) => {
 	};
 }
 
-export default function (options?: Options): AstroIntegration {
+/**
+ * Astro Datastar integration
+ *
+ * @param options
+ * @returns AstroIntegration
+ * @example
+ * ```js
+ * // astro.config.mjs
+ * import { defineConfig } from "astro/config";
+ * import datastar from "@pekochan069/astro-datastar";
+ *
+ * // https://astro.build/config
+ * export default defineConfig({
+ *   integrations: [datastar()],
+ * });
+ * ```
+ */
+export default function datastar(options?: Options): AstroIntegration {
 	const script = createScript(options);
 
 	return {
