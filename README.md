@@ -4,7 +4,7 @@ This astro integration lets you use [Datastar](https://data-star.dev/) in your p
 
 ## How to use
 
-First install `astro-datastar` package.
+First install `datastar` and `astro-datastar` packages.
 
 ```sh
 npm install @pekochan069/astro-datastar
@@ -19,7 +19,7 @@ pnpm add @pekochan069/astro-datastar
 ```
 
 ```sh
-deno add jsr:@pekochan069/astro-datastar
+deno add npm:@starfederation/datastar npm:@pekochan069/astro-datastar
 ```
 
 ```sh
