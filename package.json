@@ -1,0 +1,39 @@
+{
+  "name": "astro-datastar",
+  "description": "Datastar integration for Astro",
+  "version": "0.0.1",
+  "author": "pekochan069",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pekochan069/astro-datastar"
+  },
+  "keywords": [
+    "astro-integration",
+    "astro",
+    "datastar"
+  ],
+  "homepage": "https://github.com/pekochan069/astro-datastar",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc && bun build --outdir ./dist --target node --format esm --minify ./src/index.ts",
+    "format": "biome format --write ./src",
+    "lint": "biome lint --write ./src"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "astro": "^5.2.3",
+    "vite": "^6.0.11",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "@starfederation/datastar": "^1.0.0-beta.3"
+  },
+  "packageManager": "bun@1.2.2"
+}
