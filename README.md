@@ -29,7 +29,7 @@ yarn add astro-datastar
 After installation, you need to add `astro-datastar` to your Astro configuration file.
 
 ```diff
-  # astro.config.mjs
+  // astro.config.mjs
   // @ts-check
   import { defineConfig } from "astro/config";
 + import datastar from "astro-datastar";
@@ -48,7 +48,7 @@ After installation, you need to add `astro-datastar` to your Astro configuration
 By default, `astro-datastar` uses `datastar` bundle which includes all official plugins. If you set `noDefaultPlugins` to `true`, then `astro-datastar` will load `datastar-core` bundle instead, which doesn't include any plugins.
 
 ```diff
-# astro.config.mjs
+  // astro.config.mjs
   // @ts-check
   import { defineConfig } from "astro/config";
   import datastar from "astro-datastar";
@@ -65,7 +65,7 @@ By default, `astro-datastar` uses `datastar` bundle which includes all official 
 Similar to [@astrojs/alpinejs](https://github.com/withastro/astro/tree/main/packages/integrations/alpinejs), `astro-datastar` supports custom entrypoint. With custom entrypoint, you have full control over which plugins are included, use custom plugins, etc.
 
 ```diff
-  # astro.config.mjs
+  // astro.config.mjs
   // @ts-check
   import { defineConfig } from "astro/config";
   import datastar from "astro-datastar";
