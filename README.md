@@ -29,16 +29,16 @@ yarn add astro-datastar
 After installation, you need to add `astro-datastar` to your Astro configuration file.
 
 ```diff
-# astro.config.mjs
-// @ts-check
-import { defineConfig } from "astro/config";
-+import datastar from "astro-datastar";
+  # astro.config.mjs
+  // @ts-check
+  import { defineConfig } from "astro/config";
++ import datastar from "astro-datastar";
 
-// https://astro.build/config
-export default defineConfig({
-+  integrations: [datastar()],
-                 ^^^^^^^^^^
-});
+  // https://astro.build/config
+  export default defineConfig({
++   integrations: [datastar()],
+                   ^^^^^^^^^^
+  });
 ```
 
 ## Configuration
@@ -49,15 +49,15 @@ By default, `astro-datastar` uses `datastar` bundle which includes all official 
 
 ```diff
 # astro.config.mjs
-// @ts-check
-import { defineConfig } from "astro/config";
-import datastar from "astro-datastar";
+  // @ts-check
+  import { defineConfig } from "astro/config";
+  import datastar from "astro-datastar";
 
-// https://astro.build/config
-export default defineConfig({
-+  integrations: [datastar({ noDefaultPlugin: true })],
-                            ^^^^^^^^^^^^^^^^^^^^^
-});
+  // https://astro.build/config
+  export default defineConfig({
++   integrations: [datastar({ noDefaultPlugin: true })],
+                              ^^^^^^^^^^^^^^^^^^^^^
+  });
 ```
 
 ### entrypoint
@@ -65,17 +65,18 @@ export default defineConfig({
 Similar to [@astrojs/alpinejs](https://github.com/withastro/astro/tree/main/packages/integrations/alpinejs), `astro-datastar` supports custom entrypoint. With custom entrypoint, you have full control over which plugins are included, use custom plugins, etc.
 
 ```diff
-# astro.config.mjs
-// @ts-check
-import { defineConfig } from "astro/config";
-import datastar from "astro-datastar";
+  # astro.config.mjs
+  // @ts-check
+  import { defineConfig } from "astro/config";
+  import datastar from "astro-datastar";
 
-// https://astro.build/config
-export default defineConfig({
-  integrations: [datastar({
-+    entrypoint: "/script/to/entrypoint.js",
-})],
-});
+  // https://astro.build/config
+  export default defineConfig({
+    integrations: [datastar({
++     entrypoint: "/script/to/entrypoint.js",
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })],
+  });
 ```
 
 ```js
