@@ -7,23 +7,23 @@ This astro integration lets you use [Datastar](https://data-star.dev/) in your p
 First install `astro-datastar` package.
 
 ```sh
-npm install
+npm install astro-datastar
 ```
 
 ```sh
-bun install
+bun add astro-datastar
 ```
 
 ```sh
-pnpm install
+pnpm install astro-datastar
 ```
 
 ```sh
-deno install npm:
+deno install npm:astro-datastar
 ```
 
 ```sh
-yarn install
+yarn add astro-datastar
 ```
 
 After installation, you need to add `astro-datastar` to your Astro configuration file.
@@ -32,7 +32,7 @@ After installation, you need to add `astro-datastar` to your Astro configuration
 # astro.config.mjs
 // @ts-check
 import { defineConfig } from "astro/config";
-+import datastar from "";
++import datastar from "astro-datastar";
 
 // https://astro.build/config
 export default defineConfig({
@@ -51,7 +51,7 @@ By default, `astro-datastar` uses `datastar` bundle which includes all official 
 # astro.config.mjs
 // @ts-check
 import { defineConfig } from "astro/config";
-import datastar from "";
+import datastar from "astro-datastar";
 
 // https://astro.build/config
 export default defineConfig({
@@ -68,7 +68,7 @@ Similar to [@astrojs/alpinejs](https://github.com/withastro/astro/tree/main/pack
 # astro.config.mjs
 // @ts-check
 import { defineConfig } from "astro/config";
-import datastar from "";
+import datastar from "astro-datastar";
 
 // https://astro.build/config
 export default defineConfig({
