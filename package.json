@@ -1,7 +1,7 @@
 {
   "name": "@pekochan069/astro-datastar",
   "description": "Astro integration for Datastar",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "pekochan069",
   "license": "MIT",
   "repository": {
