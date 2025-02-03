@@ -1,5 +1,5 @@
 {
-  "name": "astro-datastar",
+  "name": "@pekochan069/astro-datastar",
   "version": "0.0.1",
   "exports": "./src/index.ts"
 }
