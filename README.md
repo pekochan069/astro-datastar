@@ -15,7 +15,7 @@ bun add @pekochan069/astro-datastar
 ```
 
 ```sh
-pnpm install @pekochan069/astro-datastar
+pnpm add @pekochan069/astro-datastar
 ```
 
 ```sh
@@ -30,7 +30,6 @@ After installation, you need to add `astro-datastar` to your Astro configuration
 
 ```diff
   // astro.config.mjs
-  // @ts-check
   import { defineConfig } from "astro/config";
 + import datastar from "@pekochan069/astro-datastar";
 
@@ -49,14 +48,15 @@ By default, `astro-datastar` uses `datastar` bundle which includes all official 
 
 ```diff
   // astro.config.mjs
-  // @ts-check
   import { defineConfig } from "astro/config";
   import datastar from "@pekochan069/astro-datastar";
 
   // https://astro.build/config
   export default defineConfig({
-+   integrations: [datastar({ noDefaultPlugin: true })],
-                              ^^^^^^^^^^^^^^^^^^^^^
+    integrations: [datastar({
++     noDefaultPlugin: true,
+      ^^^^^^^^^^^^^^^^^^^^^^
+    })],
   });
 ```
 
@@ -66,7 +66,6 @@ Similar to [@astrojs/alpinejs](https://github.com/withastro/astro/tree/main/pack
 
 ```diff
   // astro.config.mjs
-  // @ts-check
   import { defineConfig } from "astro/config";
   import datastar from "@pekochan069/astro-datastar";
 
@@ -80,6 +79,7 @@ Similar to [@astrojs/alpinejs](https://github.com/withastro/astro/tree/main/pack
 ```
 
 ```js
+// script/to/entrypoint.js
 function customPlugin() {
     ...
 }
@@ -94,6 +94,7 @@ export default (datastar) {
 If you set `noDefaultPlugins` to `true`, you can modify the snippet below to include only you are actually using.
 
 ```js
+// entrypoint.js
 import { DELETE } from "/node_modules/@starfederation/datastar/dist/plugins/official/backend/actions/delete";
 import { GET } from "/node_modules/@starfederation/datastar/dist/plugins/official/backend/actions/get";
 import { PATCH } from "/node_modules/@starfederation/datastar/dist/plugins/official/backend/actions/patch";
