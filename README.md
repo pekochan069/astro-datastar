@@ -42,6 +42,24 @@ After installation, you need to add `astro-datastar` to your Astro configuration
 
 ## Configuration
 
+### plugins
+
+You can specify which plugins to be included using `plugins` options.
+
+```diff
+  // astro.config.mjs
+  import { defineConfig } from "astro/config";
+  import datastar from "@pekochan069/astro-datastar";
+
+  // https://astro.build/config
+  export default defineConfig({
+    integrations: [datastar({
++     plugins: ["on", "clipboard"],
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })],
+  });
+```
+
 ### noDefaultPlugins
 
 By default, `astro-datastar` uses `datastar` bundle which includes all official plugins. If you set `noDefaultPlugins` to `true`, then `astro-datastar` will load `datastar-core` bundle instead, which doesn't include any plugins.
